@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l4R-SE-mwL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Alarms View Controller-->
+        <!--Alarms-->
         <scene sceneID="OEp-8J-11U">
             <objects>
                 <tableViewController id="A8F-YD-Tar" customClass="AlarmsViewController" customModule="SmartAlarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,10 +25,123 @@
                             <outlet property="delegate" destination="A8F-YD-Tar" id="23v-xD-55A"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Alarms" id="y13-Eu-vMz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wA5-WC-3KJ">
+                            <connections>
+                                <segue destination="3n8-j0-Vj5" kind="presentation" id="jRf-0p-hae"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ri0-au-zL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1178" y="333"/>
+        </scene>
+        <!--Add Alarm-->
+        <scene sceneID="xiZ-39-32g">
+            <objects>
+                <viewController id="J2V-hU-EBM" customClass="EditAlarmViewController" customModule="SmartAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mTc-0K-uOv"/>
+                        <viewControllerLayoutGuide type="bottom" id="STT-ZM-bvx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CPf-3K-ecq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAd-k6-gEW">
+                                <rect key="frame" x="140" y="72" width="320" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="J2V-hU-EBM" id="tYb-sK-IDb"/>
+                                    <outlet property="delegate" destination="J2V-hU-EBM" id="oYv-tp-78w"/>
+                                </connections>
+                            </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9rz-kt-sTb">
+                                <rect key="frame" x="16" y="264" width="568" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wW8-WE-9Ec">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wW8-WE-9Ec" id="CGK-s6-UKl">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="J2V-hU-EBM" id="TFl-Fd-Bnj"/>
+                                    <outlet property="delegate" destination="J2V-hU-EBM" id="pZk-6d-6BU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9rz-kt-sTb" firstAttribute="top" secondItem="NAd-k6-gEW" secondAttribute="bottom" constant="30" id="2sm-Nd-fq5"/>
+                            <constraint firstItem="NAd-k6-gEW" firstAttribute="top" secondItem="mTc-0K-uOv" secondAttribute="bottom" constant="8" id="D9i-fU-rkx"/>
+                            <constraint firstItem="9rz-kt-sTb" firstAttribute="leading" secondItem="CPf-3K-ecq" secondAttribute="leading" id="DyV-ye-fb4"/>
+                            <constraint firstAttribute="centerX" secondItem="NAd-k6-gEW" secondAttribute="centerX" id="ICp-lT-19z"/>
+                            <constraint firstAttribute="centerX" secondItem="9rz-kt-sTb" secondAttribute="centerX" id="UMd-qY-Wf6"/>
+                            <constraint firstAttribute="trailing" secondItem="9rz-kt-sTb" secondAttribute="trailing" id="xIm-S6-4nn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DyV-ye-fb4"/>
+                                <exclude reference="xIm-S6-4nn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Alarm" id="SM1-fH-A9Q">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="c37-jB-DRh">
+                            <connections>
+                                <action selector="cancelPressed:" destination="J2V-hU-EBM" id="GJR-Y1-U6p"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ySW-cI-BBG"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="settingsTable" destination="9rz-kt-sTb" id="KBo-CP-DUB"/>
+                        <outlet property="timePicker" destination="NAd-k6-gEW" id="veQ-dx-7Zs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="faJ-Ru-APj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808" y="333"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Z4-Gf-LmW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l4R-SE-mwL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jEM-NV-wk4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A8F-YD-Tar" kind="relationship" relationship="rootViewController" id="d3z-h5-MA1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjv-BZ-lSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="366" y="333"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cga-ff-xZ4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3n8-j0-Vj5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wkM-C0-Wsu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J2V-hU-EBM" kind="relationship" relationship="rootViewController" id="D7W-uT-fUQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="06e-7F-YZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="333"/>
         </scene>
     </scenes>
 </document>

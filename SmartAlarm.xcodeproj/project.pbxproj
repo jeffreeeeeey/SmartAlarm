@@ -14,6 +14,7 @@
 		803FDB1B1AA341FA0028B6B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803FDB191AA341FA0028B6B1 /* LaunchScreen.xib */; };
 		803FDB271AA341FA0028B6B1 /* SmartAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FDB261AA341FA0028B6B1 /* SmartAlarmTests.swift */; };
 		803FDB311AA3C2DB0028B6B1 /* AlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FDB301AA3C2DB0028B6B1 /* AlarmsViewController.swift */; };
+		803FDB331AA491030028B6B1 /* EditAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FDB321AA491030028B6B1 /* EditAlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		803FDB251AA341FA0028B6B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		803FDB261AA341FA0028B6B1 /* SmartAlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartAlarmTests.swift; sourceTree = "<group>"; };
 		803FDB301AA3C2DB0028B6B1 /* AlarmsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmsViewController.swift; sourceTree = "<group>"; };
+		803FDB321AA491030028B6B1 /* EditAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				803FDB101AA341FA0028B6B1 /* AppDelegate.swift */,
 				803FDB121AA341FA0028B6B1 /* ViewController.swift */,
 				803FDB141AA341FA0028B6B1 /* Main.storyboard */,
+				803FDB321AA491030028B6B1 /* EditAlarmViewController.swift */,
 				803FDB301AA3C2DB0028B6B1 /* AlarmsViewController.swift */,
 				803FDB171AA341FA0028B6B1 /* Images.xcassets */,
 				803FDB191AA341FA0028B6B1 /* LaunchScreen.xib */,
@@ -217,6 +220,7 @@
 			files = (
 				803FDB311AA3C2DB0028B6B1 /* AlarmsViewController.swift in Sources */,
 				803FDB131AA341FA0028B6B1 /* ViewController.swift in Sources */,
+				803FDB331AA491030028B6B1 /* EditAlarmViewController.swift in Sources */,
 				803FDB111AA341FA0028B6B1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
