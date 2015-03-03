@@ -17,7 +17,7 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     private let minuteComponent = 1
     private let hours = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
     private let minutes = ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"]
-    
+    let cellIdentifier = "cell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +72,35 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     //MAEK: - Table View Data Source Methods
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     
-
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? UITableViewCell
+    
+        // Configure the cell...
+        if (cell == nil) {
+            cell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
+        }
+        
+        cell!.textLabel!.text = "Repeat"
+        cell!.detailTextLabel?.text = "never"
+    
+        return cell!
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var title = ""
+        if section == 0 {
+            title = "settings"
+        }
+        return title
+    }
 
 }
