@@ -8,7 +8,9 @@
 
 import UIKit
 
-class SetRepeatViewController: UIViewController {
+class SetRepeatViewController: UITableViewController {
+    private let cellIdentifier = "cell"
+    private let weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,29 @@ class SetRepeatViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: - Table View Data Source Methods
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return weekDays.count
+    }
+    
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? UITableViewCell
+        
+        // Configure the cell...
+        if (cell == nil) {
+            cell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
+        }
+        cell?.textLabel?.text = weekDays[indexPath.row]
+        
+        
+        return cell!
+    }
 
     /*
     // MARK: - Navigation

@@ -60,7 +60,7 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    //MARK: - Picker Delegate Methods
+    //MARK: - Picker View Delegate Methods
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         if component == hourComponent {
@@ -70,14 +70,22 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    //MAEK: - Table View Data Source Methods
+    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        if component == 0 {
+            return 50.0
+        } else {
+            return 50.0
+        }
+    }
+    
+    //MARK: - Table View Data Source Methods
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     
@@ -88,9 +96,15 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if (cell == nil) {
             cell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
         }
+        if indexPath.row == 0 {
+            cell!.textLabel!.text = "Repeat"
+            cell!.detailTextLabel?.text = "never"
+        } else if indexPath.row == 1 {
+            cell!.textLabel!.text = "Holidays"
+        } else if indexPath.row == 2 {
+            cell?.textLabel?.text = "Sound"
+        }
         
-        cell!.textLabel!.text = "Repeat"
-        cell!.detailTextLabel?.text = "never"
     
         return cell!
     }
