@@ -16,6 +16,9 @@ class SetRepeatViewController: UITableViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tableView.allowsMultipleSelection = true
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
