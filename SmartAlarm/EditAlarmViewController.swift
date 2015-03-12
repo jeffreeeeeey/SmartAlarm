@@ -13,17 +13,19 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBOutlet weak var settingsTable: UITableView!
     
+    private var alarmsList: AlarmsList!
     private let hourComponent = 0
     private let minuteComponent = 1
     private let hours = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
     private let minutes = ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"]
     let cellIdentifier = "cell"
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        alarmsList = AlarmsList.sharedAlarmsList
         
         
     }
@@ -39,7 +41,6 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let calendar = NSCalendar.currentCalendar()
         
         var date = NSDate()
-        //println("now: \(date)")
         
         let hour = hours[self.timePicker.selectedRowInComponent(0)]
         let minute = minutes[self.timePicker.selectedRowInComponent(1)]
@@ -56,17 +57,23 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         dateComponent.minute = (minute as NSString).integerValue
         let GMTDate: NSDate? = calendar.dateFromComponents(dateComponent)
         
-        // Transfer the GMT date to this time zone
-        //let alarmDate: NSDate! = NSDate(timeInterval: 28800, sinceDate: GMTDate!)
-        
+        // a formatter transfer the GMTime to local
         let dateFormater = NSDateFormatter.init()
         dateFormater.timeStyle = NSDateFormatterStyle.MediumStyle
         dateFormater.dateStyle = NSDateFormatterStyle.MediumStyle
         let gmtDateString = dateFormater.stringFromDate(GMTDate!)
 
-        //println(NSTimeZone.systemTimeZone())
         println("alarm date: \(gmtDateString)")
         
+        for alarm in alarmsList.alarmsList {
+            if((GMTDate?.isEqualToDate(alarm.date)) != nil){
+                let message = "You select the same time"
+                let alert = UIAlertController(title: "select time", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                let action = UIAlertAction(title: "Good", style: UIAlertActionStyle.Default, handler: nil)
+                alert.addAction(action)
+                presentViewController(alert, animated: true, completion: nil)
+            }
+        }
         
         /*
         let message = "You select \(hour) : \(minute)"

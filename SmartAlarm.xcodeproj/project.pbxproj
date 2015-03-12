@@ -22,6 +22,7 @@
 		803FDB271AA341FA0028B6B1 /* SmartAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FDB261AA341FA0028B6B1 /* SmartAlarmTests.swift */; };
 		803FDB311AA3C2DB0028B6B1 /* AlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FDB301AA3C2DB0028B6B1 /* AlarmsViewController.swift */; };
 		803FDB331AA491030028B6B1 /* EditAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FDB321AA491030028B6B1 /* EditAlarmViewController.swift */; };
+		809CC2001AB243E700352482 /* AlarmsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809CC1FF1AB243E700352482 /* AlarmsList.swift */; };
 		80A06A181AA5E4EC000DE7F1 /* SetRepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A06A171AA5E4EC000DE7F1 /* SetRepeatViewController.swift */; };
 		80A06A1A1AA7B35B000DE7F1 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A06A191AA7B35B000DE7F1 /* Alarm.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		803FDB261AA341FA0028B6B1 /* SmartAlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartAlarmTests.swift; sourceTree = "<group>"; };
 		803FDB301AA3C2DB0028B6B1 /* AlarmsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmsViewController.swift; sourceTree = "<group>"; };
 		803FDB321AA491030028B6B1 /* EditAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAlarmViewController.swift; sourceTree = "<group>"; };
+		809CC1FF1AB243E700352482 /* AlarmsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmsList.swift; sourceTree = "<group>"; };
 		80A06A171AA5E4EC000DE7F1 /* SetRepeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRepeatViewController.swift; sourceTree = "<group>"; };
 		80A06A191AA7B35B000DE7F1 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +185,7 @@
 				803FDB121AA341FA0028B6B1 /* ViewController.swift */,
 				803FDB141AA341FA0028B6B1 /* Main.storyboard */,
 				80A06A191AA7B35B000DE7F1 /* Alarm.swift */,
+				809CC1FF1AB243E700352482 /* AlarmsList.swift */,
 				80A06A171AA5E4EC000DE7F1 /* SetRepeatViewController.swift */,
 				803FDB321AA491030028B6B1 /* EditAlarmViewController.swift */,
 				803FDB301AA3C2DB0028B6B1 /* AlarmsViewController.swift */,
@@ -390,6 +393,7 @@
 			files = (
 				803FDB311AA3C2DB0028B6B1 /* AlarmsViewController.swift in Sources */,
 				803FDB131AA341FA0028B6B1 /* ViewController.swift in Sources */,
+				809CC2001AB243E700352482 /* AlarmsList.swift in Sources */,
 				803FDB331AA491030028B6B1 /* EditAlarmViewController.swift in Sources */,
 				803FDB111AA341FA0028B6B1 /* AppDelegate.swift in Sources */,
 				80A06A181AA5E4EC000DE7F1 /* SetRepeatViewController.swift in Sources */,
@@ -658,6 +662,7 @@
 				0482D9811AB1620A0015A165 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0482D9831AB1620A0015A165 /* Build configuration list for PBXNativeTarget "SmartAlarm WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +671,7 @@
 				0482D97F1AB1620A0015A165 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		803FDB061AA341FA0028B6B1 /* Build configuration list for PBXProject "SmartAlarm" */ = {
 			isa = XCConfigurationList;

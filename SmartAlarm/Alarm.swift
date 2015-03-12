@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Alarm {
+class Alarm :NSObject {
     var date: NSDate
     var labelText = "Alarm"
     var repeat: [String] = []
