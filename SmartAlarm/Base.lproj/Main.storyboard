@@ -109,7 +109,11 @@
                                 <action selector="cancelPressed:" destination="J2V-hU-EBM" id="GJR-Y1-U6p"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ySW-cI-BBG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ySW-cI-BBG">
+                            <connections>
+                                <action selector="savePressed:" destination="J2V-hU-EBM" id="VdT-JU-rQM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="settingsTable" destination="9rz-kt-sTb" id="KBo-CP-DUB"/>

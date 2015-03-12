@@ -24,6 +24,8 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 
         // Do any additional setup after loading the view.
         
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +33,52 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelPressed(sender: AnyObject) {
+    // MARK- Set Alarm
+    
+    @IBAction func savePressed(sender: UIBarButtonItem) {
+        let calendar = NSCalendar.currentCalendar()
+        
+        var date = NSDate()
+        //println("now: \(date)")
+        
+        let hour = hours[self.timePicker.selectedRowInComponent(0)]
+        let minute = minutes[self.timePicker.selectedRowInComponent(1)]
+        
+        let year = calendar.component(NSCalendarUnit.CalendarUnitYear, fromDate: date)
+        let month = calendar.component(NSCalendarUnit.CalendarUnitMonth, fromDate: date)
+        let day = calendar.component(NSCalendarUnit.CalendarUnitDay, fromDate: date)
+        
+        let dateComponent = NSDateComponents.init()
+        dateComponent.year = year
+        dateComponent.month = month
+        dateComponent.day = day
+        dateComponent.hour = (hour as NSString).integerValue
+        dateComponent.minute = (minute as NSString).integerValue
+        let GMTDate: NSDate? = calendar.dateFromComponents(dateComponent)
+        
+        // Transfer the GMT date to this time zone
+        //let alarmDate: NSDate! = NSDate(timeInterval: 28800, sinceDate: GMTDate!)
+        
+        let dateFormater = NSDateFormatter.init()
+        dateFormater.timeStyle = NSDateFormatterStyle.MediumStyle
+        dateFormater.dateStyle = NSDateFormatterStyle.MediumStyle
+        let gmtDateString = dateFormater.stringFromDate(GMTDate!)
+
+        //println(NSTimeZone.systemTimeZone())
+        println("alarm date: \(gmtDateString)")
+        
+        
+        /*
+        let message = "You select \(hour) : \(minute)"
+        let alert = UIAlertController(title: "select time", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Good", style: UIAlertActionStyle.Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+        */
+    }
+    
+    
+    @IBAction func cancelPressed(sender: UIBarButtonItem) {
         let pre = self.presentingViewController as UIViewController!
         
         pre.dismissViewControllerAnimated(true, completion: nil)
@@ -99,7 +146,7 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         if indexPath.row == 0 {
             cell!.textLabel!.text = "Repeat"
-            cell!.detailTextLabel?.text = "never"
+            cell!.detailTextLabel?.text = "Only Once"
         } else if indexPath.row == 1 {
             cell!.textLabel!.text = "Holidays"
         } else if indexPath.row == 2 {
@@ -117,5 +164,6 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         return title
     }
+    
 
 }

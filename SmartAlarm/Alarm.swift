@@ -9,8 +9,22 @@
 import Foundation
 
 class Alarm {
-    var label = "Alarm"
+    var date: NSDate
+    var labelText = "Alarm"
     var repeat: [String] = []
     var useHolidays = false
     var sound = ""
+    
+    init(date: NSDate) {
+        self.date = date
+    }
+    
+    init(date: NSDate, labelText: String, repeat: [String], useHolidays: Bool, sound: String) {
+        
+        self.date = date
+        self.labelText = labelText
+        self.repeat = repeat
+        self.useHolidays = useHolidays
+        self.sound = sound
+    }
 }
