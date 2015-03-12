@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0482D9681AB162090015A165 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482D9671AB162090015A165 /* InterfaceController.swift */; };
+		0482D96A1AB162090015A165 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482D9691AB162090015A165 /* NotificationController.swift */; };
+		0482D96C1AB162090015A165 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0482D96B1AB162090015A165 /* Images.xcassets */; };
+		0482D9701AB1620A0015A165 /* SmartAlarm WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 0482D96F1AB1620A0015A165 /* SmartAlarm WatchKit App.app */; };
+		0482D9781AB1620A0015A165 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482D9761AB1620A0015A165 /* Interface.storyboard */; };
+		0482D97A1AB1620A0015A165 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0482D9791AB1620A0015A165 /* Images.xcassets */; };
+		0482D97D1AB1620A0015A165 /* SmartAlarm WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0482D9621AB162090015A165 /* SmartAlarm WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		803FDB111AA341FA0028B6B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FDB101AA341FA0028B6B1 /* AppDelegate.swift */; };
 		803FDB131AA341FA0028B6B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FDB121AA341FA0028B6B1 /* ViewController.swift */; };
 		803FDB161AA341FA0028B6B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 803FDB141AA341FA0028B6B1 /* Main.storyboard */; };
@@ -20,6 +27,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0482D9711AB1620A0015A165 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 803FDB031AA341FA0028B6B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0482D96E1AB1620A0015A165;
+			remoteInfo = "SmartAlarm WatchKit App";
+		};
+		0482D97B1AB1620A0015A165 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 803FDB031AA341FA0028B6B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0482D9611AB162090015A165;
+			remoteInfo = "SmartAlarm WatchKit Extension";
+		};
 		803FDB211AA341FA0028B6B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 803FDB031AA341FA0028B6B1 /* Project object */;
@@ -29,7 +50,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0482D9841AB1620A0015A165 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0482D97D1AB1620A0015A165 /* SmartAlarm WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0482D9621AB162090015A165 /* SmartAlarm WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmartAlarm WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0482D9651AB162090015A165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0482D9661AB162090015A165 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		0482D9671AB162090015A165 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0482D9691AB162090015A165 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		0482D96B1AB162090015A165 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0482D96F1AB1620A0015A165 /* SmartAlarm WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartAlarm WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0482D9751AB1620A0015A165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0482D9771AB1620A0015A165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0482D9791AB1620A0015A165 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		803FDB0B1AA341FA0028B6B1 /* SmartAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		803FDB0F1AA341FA0028B6B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		803FDB101AA341FA0028B6B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +92,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0482D95F1AB162090015A165 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		803FDB081AA341FA0028B6B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,11 +116,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0482D9631AB162090015A165 /* SmartAlarm WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0482D9671AB162090015A165 /* InterfaceController.swift */,
+				0482D9691AB162090015A165 /* NotificationController.swift */,
+				0482D96B1AB162090015A165 /* Images.xcassets */,
+				0482D9641AB162090015A165 /* Supporting Files */,
+			);
+			path = "SmartAlarm WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		0482D9641AB162090015A165 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0482D9651AB162090015A165 /* Info.plist */,
+				0482D9661AB162090015A165 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0482D9731AB1620A0015A165 /* SmartAlarm WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				0482D9761AB1620A0015A165 /* Interface.storyboard */,
+				0482D9791AB1620A0015A165 /* Images.xcassets */,
+				0482D9741AB1620A0015A165 /* Supporting Files */,
+			);
+			path = "SmartAlarm WatchKit App";
+			sourceTree = "<group>";
+		};
+		0482D9741AB1620A0015A165 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0482D9751AB1620A0015A165 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		803FDB021AA341FA0028B6B1 = {
 			isa = PBXGroup;
 			children = (
 				803FDB0D1AA341FA0028B6B1 /* SmartAlarm */,
 				803FDB231AA341FA0028B6B1 /* SmartAlarmTests */,
+				0482D9631AB162090015A165 /* SmartAlarm WatchKit Extension */,
+				0482D9731AB1620A0015A165 /* SmartAlarm WatchKit App */,
 				803FDB0C1AA341FA0028B6B1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +170,8 @@
 			children = (
 				803FDB0B1AA341FA0028B6B1 /* SmartAlarm.app */,
 				803FDB201AA341FA0028B6B1 /* SmartAlarmTests.xctest */,
+				0482D9621AB162090015A165 /* SmartAlarm WatchKit Extension.appex */,
+				0482D96F1AB1620A0015A165 /* SmartAlarm WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +221,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0482D9611AB162090015A165 /* SmartAlarm WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0482D9831AB1620A0015A165 /* Build configuration list for PBXNativeTarget "SmartAlarm WatchKit Extension" */;
+			buildPhases = (
+				0482D95E1AB162090015A165 /* Sources */,
+				0482D95F1AB162090015A165 /* Frameworks */,
+				0482D9601AB162090015A165 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0482D9721AB1620A0015A165 /* PBXTargetDependency */,
+			);
+			name = "SmartAlarm WatchKit Extension";
+			productName = "SmartAlarm WatchKit Extension";
+			productReference = 0482D9621AB162090015A165 /* SmartAlarm WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		0482D96E1AB1620A0015A165 /* SmartAlarm WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0482D9821AB1620A0015A165 /* Build configuration list for PBXNativeTarget "SmartAlarm WatchKit App" */;
+			buildPhases = (
+				0482D96D1AB1620A0015A165 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmartAlarm WatchKit App";
+			productName = "SmartAlarm WatchKit App";
+			productReference = 0482D96F1AB1620A0015A165 /* SmartAlarm WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		803FDB0A1AA341FA0028B6B1 /* SmartAlarm */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 803FDB2A1AA341FA0028B6B1 /* Build configuration list for PBXNativeTarget "SmartAlarm" */;
@@ -134,10 +261,12 @@
 				803FDB071AA341FA0028B6B1 /* Sources */,
 				803FDB081AA341FA0028B6B1 /* Frameworks */,
 				803FDB091AA341FA0028B6B1 /* Resources */,
+				0482D9841AB1620A0015A165 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0482D97C1AB1620A0015A165 /* PBXTargetDependency */,
 			);
 			name = SmartAlarm;
 			productName = SmartAlarm;
@@ -171,6 +300,12 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = BM;
 				TargetAttributes = {
+					0482D9611AB162090015A165 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					0482D96E1AB1620A0015A165 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					803FDB0A1AA341FA0028B6B1 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -195,11 +330,31 @@
 			targets = (
 				803FDB0A1AA341FA0028B6B1 /* SmartAlarm */,
 				803FDB1F1AA341FA0028B6B1 /* SmartAlarmTests */,
+				0482D9611AB162090015A165 /* SmartAlarm WatchKit Extension */,
+				0482D96E1AB1620A0015A165 /* SmartAlarm WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0482D9601AB162090015A165 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482D9701AB1620A0015A165 /* SmartAlarm WatchKit App.app in Resources */,
+				0482D96C1AB162090015A165 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0482D96D1AB1620A0015A165 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482D9781AB1620A0015A165 /* Interface.storyboard in Resources */,
+				0482D97A1AB1620A0015A165 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		803FDB091AA341FA0028B6B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +375,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0482D95E1AB162090015A165 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482D96A1AB162090015A165 /* NotificationController.swift in Sources */,
+				0482D9681AB162090015A165 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		803FDB071AA341FA0028B6B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +408,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0482D9721AB1620A0015A165 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0482D96E1AB1620A0015A165 /* SmartAlarm WatchKit App */;
+			targetProxy = 0482D9711AB1620A0015A165 /* PBXContainerItemProxy */;
+		};
+		0482D97C1AB1620A0015A165 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0482D9611AB162090015A165 /* SmartAlarm WatchKit Extension */;
+			targetProxy = 0482D97B1AB1620A0015A165 /* PBXContainerItemProxy */;
+		};
 		803FDB221AA341FA0028B6B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 803FDB0A1AA341FA0028B6B1 /* SmartAlarm */;
@@ -252,6 +426,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0482D9761AB1620A0015A165 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0482D9771AB1620A0015A165 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		803FDB141AA341FA0028B6B1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -271,6 +453,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0482D97E1AB1620A0015A165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SmartAlarm WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0482D97F1AB1620A0015A165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "SmartAlarm WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0482D9801AB1620A0015A165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = SmartAlarm_WatchKit_Extension;
+				INFOPLIST_FILE = "SmartAlarm WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		0482D9811AB1620A0015A165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				IBSC_MODULE = SmartAlarm_WatchKit_Extension;
+				INFOPLIST_FILE = "SmartAlarm WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		803FDB281AA341FA0028B6B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -354,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SmartAlarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -364,6 +607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SmartAlarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +651,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0482D9821AB1620A0015A165 /* Build configuration list for PBXNativeTarget "SmartAlarm WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0482D9801AB1620A0015A165 /* Debug */,
+				0482D9811AB1620A0015A165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0482D9831AB1620A0015A165 /* Build configuration list for PBXNativeTarget "SmartAlarm WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0482D97E1AB1620A0015A165 /* Debug */,
+				0482D97F1AB1620A0015A165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		803FDB061AA341FA0028B6B1 /* Build configuration list for PBXProject "SmartAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
