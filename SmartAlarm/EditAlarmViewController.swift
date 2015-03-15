@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var timePicker: UIPickerView!
@@ -55,25 +56,41 @@ class EditAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         dateComponent.day = day
         dateComponent.hour = (hour as NSString).integerValue
         dateComponent.minute = (minute as NSString).integerValue
-        let GMTDate: NSDate? = calendar.dateFromComponents(dateComponent)
+        let GMTDate: NSDate! = calendar.dateFromComponents(dateComponent)
         
         // a formatter transfer the GMTime to local
         let dateFormater = NSDateFormatter.init()
         dateFormater.timeStyle = NSDateFormatterStyle.MediumStyle
         dateFormater.dateStyle = NSDateFormatterStyle.MediumStyle
-        let gmtDateString = dateFormater.stringFromDate(GMTDate!)
+        let gmtDateString = dateFormater.stringFromDate(GMTDate)
 
         println("alarm date: \(gmtDateString)")
         
-        for alarm in alarmsList.alarmsList {
-            if((GMTDate?.isEqualToDate(alarm.date)) != nil){
-                let message = "You select the same time"
-                let alert = UIAlertController(title: "select time", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                let action = UIAlertAction(title: "Good", style: UIAlertActionStyle.Default, handler: nil)
-                alert.addAction(action)
-                presentViewController(alert, animated: true, completion: nil)
+        // add alarm to list 
+        
+        var dulplicate = false
+        
+        if alarmsList.alarmsList.count > 0 {
+            for am in alarmsList.alarmsList {
+                if(GMTDate.isEqualToDate(am.date)){
+                    dulplicate = true
+                    let message = "You select the same time"
+                    let alert = UIAlertController(title: "Same Time", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                    let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+                    alert.addAction(action)
+                    presentViewController(alert, animated: true, completion: nil)
+                }
             }
         }
+        
+        if dulplicate == false {
+            
+            var alarm: Alarm = Alarm(date: GMTDate)
+            alarmsList.addAlarm(alarm)
+            
+        }
+        
+        
         
         /*
         let message = "You select \(hour) : \(minute)"
