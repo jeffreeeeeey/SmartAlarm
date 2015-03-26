@@ -9,18 +9,20 @@
 import Foundation
 
 class Alarm: NSObject, NSCoding, NSCopying {
-    var date: NSDate
+    var date: NSDate?
     var labelText = "Alarm"
     var repeat: [String] = []
     var useHolidays = false
     var sound = ""
+    
+    let dateKey = "dateKey"
     
     override init() {
         
     }
     
     required init(coder aDecoder: NSCoder) {
-        <#code#>
+        date = aDecoder.decodeObjectForKey(dateKey) as? NSDate
     }
     
     init(date: NSDate) {
@@ -37,6 +39,8 @@ class Alarm: NSObject, NSCoding, NSCopying {
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
-        if let saveDate =
+        if let saveDate = date {
+            aCoder.encodeObject(date, forKey: dateKey)
+        }
     }
 }
